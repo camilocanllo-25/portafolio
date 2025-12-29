@@ -68,7 +68,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="col-lg-6 order-1 order-lg-2">
                 <div class="hero-image" data-aos="fade-left">
                     <div class="image-wrapper">

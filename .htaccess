@@ -1,0 +1,80 @@
+<IfModule mod_rewrite.c>
+    # Activar el módulo de reescritura
+    RewriteEngine On
+    
+    # Prevenir acceso a directorios sensibles
+    Options -Indexes
+    
+    # Forzar HTTPS (comentar si no tienes certificado SSL)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Redireccionar www a no-www (opcional, descomentar si lo necesitas)
+    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    
+    # Bloquear acceso a archivos sensibles
+    RewriteRule ^\.env$ - [F,L]
+    RewriteRule ^composer\.(json|lock)$ - [F,L]
+    RewriteRule ^package(-lock)?\.json$ - [F,L]
+    
+    # Si es un archivo o directorio existente, servirlo directamente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Primero intentar servir desde public/ (para Laravel)
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L]
+    
+    # Si public/index.php existe, redirigir allí (Laravel)
+    RewriteCond %{DOCUMENT_ROOT}/public/index.php -f
+    RewriteRule ^ /public/index.php [L]
+</IfModule>
+
+# Configuración de PHP para hosting compartido
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 64M
+    php_value post_max_size 64M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+    php_value memory_limit 256M
+</IfModule>
+
+# Habilitar compresión GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache de navegador
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+
+# Protección adicional
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(env|log|md|txt|sql|git|gitignore|htaccess|htpasswd)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Permitir acceso a archivos específicos necesarios
+<FilesMatch "^(robots\.txt|sitemap\.xml|README\.md|README-PORTFOLIO\.md)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Desactivar la firma del servidor
+ServerSignature Off

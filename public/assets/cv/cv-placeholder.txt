@@ -1,0 +1,6 @@
+Placeholder para CV de Camilo Llorente Vásquez
+Este archivo debe ser reemplazado por el CV real en formato PDF.
+
+Ubicación requerida: public/assets/cv/camilo-cv.pdf
+
+Mientras tanto, el botón de descarga dirigirá a este archivo placeholder.

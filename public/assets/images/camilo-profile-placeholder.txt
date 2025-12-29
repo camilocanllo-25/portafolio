@@ -1,0 +1,13 @@
+<!-- Placeholder para imagen de perfil de Camilo Llorente -->
+<!-- Por favor, reemplaza este archivo con tu foto real -->
+<!-- Dimensiones recomendadas: 500x500px o mayor -->
+<!-- Formatos soportados: JPG, PNG, WebP -->
+
+Imagen de perfil: camilo-profile.jpeg
+Ubicación: /public/assets/images/camilo-profile.jpeg
+
+Instrucciones:
+1. Toma una foto profesional tuya
+2. Redimensiónala a 500x500px (cuadrada)
+3. Optimízala para web (máximo 200KB)
+4. Guárdala como camilo-profile.jpeg en esta ubicación

@@ -1,0 +1,12 @@
+PDF Placeholder
+
+Para generar el archivo PDF real:
+
+1. Abrir CV-Camilo-Llorente.html en un navegador web
+2. Usar Ctrl+P o Cmd+P para imprimir
+3. Seleccionar "Guardar como PDF"
+4. Guardar como "CV-Camilo-Llorente.pdf"
+
+O usar el script Node.js incluido con Puppeteer.
+
+El archivo HTML está completamente optimizado para conversión a PDF y mantiene el diseño profesional.

@@ -1,0 +1,40 @@
+INSTRUCCIONES PARA COMPLETAR EL PORTFOLIO DE CAMILO LLORENTE
+
+Para que el portfolio funcione correctamente, necesitas agregar los siguientes archivos:
+
+1. IMAGEN DE PERFIL:
+   Archivo requerido: camilo-profile.jpeg
+   Ubicación: public/assets/images/camilo-profile.jpeg
+   Especificaciones:
+   - Formato: JPEG
+   - Tamaño recomendado: 500x500 píxeles (cuadrada)
+   - Calidad: Alta resolución
+   - Fondo: Preferible profesional o neutro
+   - Esta imagen se usará en:
+     * Preloader de carga
+     * Sección hero principal
+     * Meta tags para redes sociales
+
+2. CURRICULUM VITAE:
+   Archivo requerido: camilo-cv.pdf
+   Ubicación: public/assets/cv/camilo-cv.pdf
+   Formato: PDF
+   Contenido: CV profesional actualizado
+
+3. INICIAR SERVIDOR:
+   Una vez agregues estos archivos, ejecuta:
+   php artisan serve
+   
+   Y visita: http://localhost:8000
+
+CARACTERÍSTICAS IMPLEMENTADAS:
+✅ Preloader animado con foto de perfil
+✅ Navegación fluida con efectos
+✅ Hero section con particles.js
+✅ Animaciones GSAP avanzadas
+✅ Responsive design completo
+✅ Multiidioma (Español, Inglés, Ruso)
+✅ SEO optimizado
+✅ Colores Codesign (Rojo #ff3333, Dorado #ffd700)
+
+¡Tu portfolio Laravel está listo para funcionar!

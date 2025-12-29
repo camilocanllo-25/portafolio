@@ -1,0 +1,10 @@
+Para crear el PDF real, sigue estos pasos:
+
+1. Abre el archivo CV-Camilo-Llorente.html en Chrome
+2. Presiona Ctrl+P 
+3. Selecciona 'Guardar como PDF'
+4. Configura márgenes a 'Mínimo'
+5. Marca 'Gráficos de fondo'
+6. Guarda como 'CV-Camilo-Llorente.pdf'
+
+El archivo HTML está optimizado para conversión a PDF.

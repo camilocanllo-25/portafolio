@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Camilo Llorente Vásquez</title>
+    <style>
+        .cv-project-link {
+            margin-top: 6px;
+        }
+        .cv-project-link a {
+            color: #ff3333;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .cv-project-link a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .cv-project-desc a {
+            color: #ff3333;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .cv-project-desc a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        :root {
+            --main-bg: #181818;
+            --accent: #ff3333;
+            --text: #fff;
+            --subtext: #e0e0e0;
+            --card-bg: #232323;
+        }
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: var(--main-bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        .cv-main {
+            max-width: 900px;
+            width: 100%;
+            margin: 24px auto;
+            background: var(--main-bg);
+            border-radius: 18px;
+            box-shadow: 0 8px 40px 0 #00000055;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            box-sizing: border-box;
+            /* NO height ni min-height */
+        }
+        @media print {
+            @page {
+                size: letter portrait;
+                margin: 0;
+            }
+            html, body {
+                width: 8.5in;
+                height: 11in;
+                margin: 0;
+                padding: 0;
+                background: #181818 !important;
+                color: #fff !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                overflow: hidden !important;
+            }
+            .download-pdf-btn { display: none !important; }
+            .cv-main {
+                box-shadow: none !important;
+                margin: 0 auto !important;
+                border-radius: 0 !important;
+                max-width: 8.5in !important;
+                width: 8.5in !important;
+                min-width: unset !important;
+                display: flex !important;
+                flex-direction: row !important;
+                page-break-after: avoid;
+                page-break-before: avoid;
+                page-break-inside: avoid;
+                align-items: stretch !important;
+            }
+            .cv-left, .cv-right {
+                padding: 0.5in 0.25in !important;
+                min-width: unset !important;
+                background: #232323 !important;
+                color: #fff !important;
+                box-shadow: none !important;
+                height: auto !important;
+            }
+            .cv-left {
+                width: 30% !important;
+                min-width: 30% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            .cv-right {
+                flex: 1 !important;
+                width: 70% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+            }
+            .cv-block, .cv-exp-item, .cv-edu-item, .cv-project-card {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+            .cv-photo {
+                box-shadow: 0 4px 24px #ff333355 !important;
+                border: 5px solid #ff3333 !important;
+                width: 120px !important;
+                height: 120px !important;
+            }
+            a, .cv-links a {
+                color: #ff3333 !important;
+            }
+            .cv-project-card {
+                min-width: 200px !important;
+                width: auto !important;
+            }
+            .cv-skills-list, .cv-contact-list {
+                font-size: 90% !important;
+            }
+        }
+        .download-pdf-btn {
+            position: fixed;
+            top: 24px;
+            right: 32px;
+            z-index: 1000;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-size: 1.08rem;
+            font-weight: 700;
+            box-shadow: 0 4px 16px #ff333355;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .download-pdf-btn:hover {
+            background: #e62e2e;
+            transform: translateY(-2px) scale(1.03);
+        }
+        .cv-left {
+            background: var(--card-bg);
+            color: var(--text);
+            width: 320px;
+            min-width: 260px;
+            padding: 40px 28px 40px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .cv-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent);
+            margin-bottom: 28px;
+            box-shadow: 0 4px 24px #ff333355;
+        }
+        .cv-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .cv-role {
+            font-size: 1.1rem;
+            color: var(--text);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        .cv-contact {
+            width: 100%;
+            margin-bottom: 32px;
+        }
+        .cv-contact-title {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        .cv-contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cv-contact-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--subtext);
+            font-size: 0.98rem;
+        }
+        .cv-contact-list i {
+            color: var(--accent);
+            min-width: 18px;
+        }
+        .cv-section-title {
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 28px 0 12px 0;
+            letter-spacing: 1px;
+        }
+        .cv-skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .cv-skills-list li {
+            margin-bottom: 8px;
+            color: var(--subtext);
+            font-size: 0.98rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .cv-skills-list .bar {
+            flex: 1;
+            height: 7px;
+            background: #292929;
+            border-radius: 6px;
+            margin-left: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        .cv-skills-list .bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #ff6666);
+            border-radius: 6px;
+        }
+        .cv-links {
+            margin-top: 24px;
+            text-align: center;
+        }
+        .cv-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 8px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .cv-links a:hover {
+            color: #fff;
+        }
+        .cv-right {
+            flex: 1;
+            background: var(--main-bg);
+            color: var(--text);
+            padding: 48px 48px 40px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .cv-summary {
+            font-size: 1.08rem;
+            color: var(--subtext);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .cv-block {
+            margin-bottom: 36px;
+        }
+        .cv-block-title {
+            color: var(--accent);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
+        }
+        .cv-exp-item, .cv-edu-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 18px 22px 14px 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 12px #00000022;
+        }
+        .cv-exp-header, .cv-edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .cv-exp-role {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .cv-exp-company {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.01rem;
+        }
+        .cv-exp-period, .cv-edu-period {
+            color: #ff6666;
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
+        .cv-exp-desc, .cv-edu-desc {
+            color: var(--subtext);
+            font-size: 1.01rem;
+            margin-top: 6px;
+        }
+        .cv-projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+        .cv-project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 18px 22px 14px 22px;
+            min-width: 260px;
+            flex: 1 1 260px;
+            box-shadow: 0 2px 12px #00000022;
+        }
+        .cv-project-title {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.08rem;
+            margin-bottom: 4px;
+        }
+        .cv-project-tech {
+            color: var(--accent);
+            font-size: 0.98rem;
+            margin-bottom: 6px;
+        }
+        .cv-project-desc {
+            color: var(--subtext);
+            font-size: 0.98rem;
+        }
+        @media (max-width: 900px) {
+            .cv-main {
+                flex-direction: column;
+                max-width: 100vw;
+                width: 100vw;
+                border-radius: 0;
+                margin: 0;
+            }
+            .cv-left, .cv-right {
+                width: 100vw;
+                min-width: unset;
+                padding: 24px 4vw 24px 4vw;
+                box-sizing: border-box;
+            }
+            .cv-right {
+                padding: 24px 4vw 18px 4vw;
+            }
+        }
+        @media (max-width: 600px) {
+            .cv-main {
+                margin: 0;
+                border-radius: 0;
+                max-width: 100vw;
+                width: 100vw;
+            }
+            .cv-left, .cv-right {
+                padding: 12px 2vw 12px 2vw;
+                width: 100vw;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-pdf-btn" id="downloadPdfBtn">Descargar PDF</button>
+    <div class="pdf-export" id="pdfExportArea" style="display:flex;justify-content:center;padding:32px 0;background:#181818;">
+      <div class="cv-main" style="background:#181818;max-width:900px;width:100%;box-sizing:border-box;">
+        <div class="cv-left">
+            <img src="../images/camilo-profile.jpeg" alt="Camilo Llorente" class="cv-photo">
+            <div class="cv-name">Camilo Llorente Vásquez</div>
+            <div class="cv-role">Desarrollador de Software</div>
+            <div class="cv-contact">
+                <div class="cv-contact-title">Contacto</div>
+                <ul class="cv-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Turbo Antioquia - Colombia</li>
+                    <li><i class="fas fa-envelope"></i> contacto@camilollorente.blog</li>
+                    <li><i class="fas fa-phone"></i> <a href="https://wa.me/573002112728" target="_blank" style="color:#ff3333;font-weight:bold;text-decoration:none;">+57 300 211 2728 (WhatsApp)</a></li>
+                    <li><i class="fas fa-globe"></i> camilollorente.blog</li>
+                </ul>
+            </div>
+            <div class="cv-section-title">Habilidades</div>
+            <ul class="cv-skills-list">
+                <li>HTML5 <div class="bar"><span style="width:100%"></span></div></li>
+                <li>CSS3 <div class="bar"><span style="width:100%"></span></div></li>
+                <li>JavaScript <div class="bar"><span style="width:98%"></span></div></li>
+                <li>Laravel <div class="bar"><span style="width:97%"></span></div></li>
+                <li>PHP <div class="bar"><span style="width:95%"></span></div></li>
+                <li>MySQL <div class="bar"><span style="width:95%"></span></div></li>
+                <li>Node.js <div class="bar"><span style="width:90%"></span></div></li>
+                <li>AJAX <div class="bar"><span style="width:95%"></span></div></li>
+                <li>Google Cloud <div class="bar"><span style="width:85%"></span></div></li>
+                <li>Firebase <div class="bar"><span style="width:85%"></span></div></li>
+                <li>Adobe Suite <div class="bar"><span style="width:90%"></span></div></li>
+                <li>QA & Testing <div class="bar"><span style="width:90%"></span></div></li>
+                <li>React <div class="bar"><span style="width:85%"></span></div></li>
+                <li>Bootstrap <div class="bar"><span style="width:95%"></span></div></li>
+                <li>Automatización <div class="bar"><span style="width:90%"></span></div></li>
+                <li>Redes y Telecomunicaciones <div class="bar"><span style="width:88%"></span></div></li>
+            </ul>
+            <div class="cv-links">
+                <a href="https://www.linkedin.com/in/camilo-andres-llorente-vasquez-41930a193/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/linecodemanager?tab=repositories" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="cv-right">
+            <div class="cv-summary">
+                Desarrollador de software y redes informáticas con siete (7) años de experiencia. He trabajado para diversas empresas, potenciando mis habilidades en desarrollo de software de gestión empresarial, inventarios, ventas y soluciones web creativas. Especializado en proyectos full-stack, automatización y tecnologías modernas. Apasionado por el diseño atractivo, animaciones y experiencias digitales de alto impacto.
+            </div>
+            <div class="cv-block">
+                <div class="cv-block-title">Experiencia</div>
+                <div class="cv-exp-item">
+                    <div class="cv-exp-header">
+                        <div class="cv-exp-role">Técnico Profesional</div>
+                        <div class="cv-exp-period">2017 - 2019</div>
+                    </div>
+                    <div class="cv-exp-company">Turbo TV</div>
+                    <div class="cv-exp-desc">
+                        Encargado de redes, mantenimiento técnico y gestión de software. Administración de infraestructura, soporte técnico y optimización de sistemas.
+                    </div>
+                </div>
+                <div class="cv-exp-item">
+                    <div class="cv-exp-header">
+                        <div class="cv-exp-role">Desarrollador Full Stack</div>
+                        <div class="cv-exp-period">2020 - 2023</div>
+                    </div>
+                    <div class="cv-exp-company">Asicom S.A.S.</div>
+                    <div class="cv-exp-desc">
+                        Desarrollo de aplicaciones empresariales usando React y .NET Core. Aplicación de patrones DDD, APIs REST, gestión de bases de datos y desarrollo de interfaces modernas.
+                    </div>
+                </div>
+            </div>
+            <div class="cv-block">
+                <div class="cv-block-title">Educación</div>
+                <div class="cv-edu-item">
+                    <div class="cv-edu-header">
+                        <div class="cv-exp-role">Redes e Informática, Administración de sistemas, redes y comunicaciones LAN/WAN</div>
+                        <div class="cv-edu-period">2018 - 2020</div>
+                    </div>
+                    <div class="cv-exp-company">Udemy</div>
+                    <div class="cv-edu-desc">Formación especializada en administración de redes, sistemas informáticos y comunicaciones empresariales.</div>
+                </div>
+                <div class="cv-edu-item">
+                    <div class="cv-edu-header">
+                        <div class="cv-exp-role">Técnico en programación de software</div>
+                        <div class="cv-edu-period">2016 - 2017</div>
+                    </div>
+                    <div class="cv-exp-company">SENA</div>
+                    <div class="cv-edu-desc">Formación técnica en desarrollo de software, programación y metodologías de desarrollo.</div>
+                </div>
+                <div class="cv-edu-item">
+                    <div class="cv-edu-header">
+                        <div class="cv-exp-role">Técnico Diseño de redes y telecomunicaciones</div>
+                        <div class="cv-edu-period">2021 - 2021</div>
+                    </div>
+                    <div class="cv-exp-company">SENA</div>
+                    <div class="cv-edu-desc">Especialización en diseño e implementación de redes de telecomunicaciones.</div>
+                </div>
+            </div>
+            <div class="cv-block">
+                <div class="cv-block-title">Proyectos Destacados</div>
+                <div class="cv-projects">
+                    <div class="cv-project-card">
+                        <div class="cv-project-title">Sistema POS Codesign Ventas</div>
+                        <div class="cv-project-tech">Laravel • PHP • JavaScript • MySQL • Bootstrap</div>
+                        <div class="cv-project-desc">Sistema punto de venta completo para negocios. <br>
+                        </div>
+                        <div class="cv-project-link">
+                            <a href="https://camilollorente.blog">Ver portafolio</a>
+                        </div>
+                    </div>
+                    <div class="cv-project-card">
+                        <div class="cv-project-title">AdminISP - Sistema de Gestión ISP</div>
+                        <div class="cv-project-tech">Laravel • API • MikroTik • WhatsApp • OLT</div>
+                        <div class="cv-project-desc">Plataforma para ISPs con gestión de clientes, servicios, integración de red y facturación.<br>
+                        </div>
+                        <div class="cv-project-link">
+                            <a href="https://camilollorente.blog">Ver portafolio</a>
+                        </div>
+                    </div>
+                    <div class="cv-project-card">
+                        <div class="cv-project-title">Portafolio Personal</div>
+                        <div class="cv-project-tech">Laravel • HTML5 • CSS3 • JavaScript • Bootstrap</div>
+                        <div class="cv-project-desc">Portafolio personal profesional con diseño moderno y responsive, mostrando proyectos y habilidades.<br>
+                        </div>
+                        <div class="cv-project-link">
+                            <a href="https://camilollorente.blog">Visitar sitio</a>
+                        </div>
+                    </div>
+                    <div class="cv-project-card">
+                        <div class="cv-project-title">TropyChamoy.com</div>
+                        <div class="cv-project-tech">Laravel • Node.js • CSS • Bootstrap • jQuery • AJAX</div>
+                        <div class="cv-project-desc">Salsas tropicales artesanales, sitio web hecho en Laravel, Node.js, Bootstrap, jQuery y AJAX.<br>
+                        </div>
+                        <div class="cv-project-link">
+                            <a href="https://tropychamoy.com">Ver proyecto</a>
+                        </div>
+                    </div>
+                    <div class="cv-project-card">
+                        <div class="cv-project-title">Sistema Domótico Inteligente</div>
+                        <div class="cv-project-tech">Arduino • C++ • Sensores IoT • Android App</div>
+                        <div class="cv-project-desc">Automatización del hogar con control de iluminación, temperatura, seguridad y monitoreo remoto.<br>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+<script src="../js/html2pdf.bundle.min.js"></script>
+<script>
+document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+    const element = document.querySelector('.cv-main');
+    // Guardar estilos originales
+    const original = {
+      width: element.style.width,
+      maxWidth: element.style.maxWidth,
+      margin: element.style.margin,
+      display: element.style.display,
+      flexDirection: element.style.flexDirection
+    };
+    
+    // Crear un contenedor temporal para el PDF
+    const tempContainer = document.createElement('div');
+    tempContainer.style.width = '612pt'; // Ancho de carta en puntos
+    tempContainer.style.margin = '0 auto';
+    tempContainer.style.position = 'absolute';
+    tempContainer.style.left = '-9999px';
+    tempContainer.style.background = '#181818';
+    document.body.appendChild(tempContainer);
+    
+    // Clonar el elemento original para no modificar el original
+    const clone = element.cloneNode(true);
+    clone.style.display = 'flex';
+    clone.style.flexDirection = 'row';
+    clone.style.maxWidth = '612pt'; // Ancho carta
+    clone.style.width = '100%';
+    clone.style.margin = '0';
+    clone.style.background = '#181818';
+    clone.style.boxShadow = 'none';
+    
+    // Asegurarse que las columnas mantengan su proporción
+    const leftCol = clone.querySelector('.cv-left');
+    const rightCol = clone.querySelector('.cv-right');
+    
+    leftCol.style.width = '30%'; // Proporción ajustada para carta
+    leftCol.style.minWidth = '30%';
+    leftCol.style.padding = '20pt';
+    
+    rightCol.style.width = '70%'; // Proporción ajustada para carta
+    rightCol.style.padding = '20pt';
+    
+    // Añadir al contenedor temporal
+    tempContainer.appendChild(clone);
+    
+    // Configuración optimizada para PDF formato carta
+    const opt = {
+        margin:       [0, 0, 0, 0],
+        filename:     'CV-Camilo-Llorente.pdf',
+        image:        { type: 'jpeg', quality: 1 },
+        html2canvas:  { 
+            scale: 2, 
+            useCORS: true, 
+            backgroundColor: '#181818', 
+            logging: false,
+            letterRendering: true,
+            allowTaint: true
+        },
+        jsPDF:        { 
+            unit: 'pt', 
+            format: 'letter', 
+            orientation: 'portrait',
+            compress: true
+        },
+        pagebreak:    { 
+            mode: ['avoid-all'], 
+            avoid: '.cv-block, .cv-project-card, .cv-exp-item, .cv-edu-item, .cv-contact-list li' 
+        },
+        enableLinks: true
+    };
+    html2pdf().set(opt).from(clone).save().then(() => {
+        // Eliminar elementos temporales
+        if (tempContainer && tempContainer.parentNode) {
+            tempContainer.parentNode.removeChild(tempContainer);
+        }
+        
+        // No necesitamos restaurar los estilos del elemento original
+        // ya que trabajamos con un clon y no modificamos el original
+        document.getElementById('pdfExportArea').style.padding = '32px 0';
+    });
+});
+</script>
+</body>
+    </div>
+</body>
+</html>

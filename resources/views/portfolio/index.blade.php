@@ -86,7 +86,7 @@
             <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="{{ asset('assets/images/camilo-profile-placeholder.svg') }}" alt="{{ $data['translations']['name'] }}" class="profile-image">
+                        <img src="{{ asset('assets/images/camilo-profile.jpeg') }}" alt="{{ $data['translations']['name'] }}" class="profile-image">
                         
                         <!-- Floating Technology Icons -->
                         <div class="floating-elements">
@@ -410,7 +410,7 @@
             <div class="col-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="{{ asset('assets/images/camilo-profile-placeholder.svg') }}" alt="{{ $data['translations']['name'] }}" class="profile-image">
+                        <img src="{{ asset('assets/images/camilo-profile.jpeg') }}" alt="{{ $data['translations']['name'] }}" class="profile-image">
                         
                         <!-- Floating Technology Icons -->
                         <div class="floating-elements">

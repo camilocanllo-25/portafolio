@@ -31,6 +31,11 @@
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Turbo Antioquia - Colombia</span>
+                            
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-plane"></i>
+                            <span>Disponibilidad de traslado inmediato</span>
                         </div>
                     </div>
 
@@ -71,7 +76,7 @@
             <div class="col-lg-6 order-1 order-lg-2">
                 <div class="hero-image" data-aos="fade-left">
                     <div class="image-wrapper">
-                        <img src="{{ asset('assets/images/camilo.jpg') }}" alt="Camilo Llorente Vásquez" class="profile-image">
+                        <img src="{{ asset('assets/images/perfil_foto.png') }}" alt="Camilo Llorente Vásquez" class="profile-image">
                         <div class="floating-elements">
                             <div class="floating-icon" data-aos="zoom-in" data-aos-delay="500" title="Laravel">
                                 <i class="fab fa-laravel"></i>

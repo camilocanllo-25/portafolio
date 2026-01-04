@@ -6,7 +6,7 @@
     <title>Camilo Llorente Vásquez | Desarrollador de Software</title>
     
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/camilo-profile.jpeg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/perfil_foto.png') }}">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -831,7 +831,7 @@
         <div class="loading-content">
             <div style="position: relative;">
                 <div class="loading-spinner"></div>
-                <img src="{{ asset('assets/images/camilo.jpg') }}" alt="Camilo Llorente" class="loading-image">
+                <img src="{{ asset('assets/images/perfil_foto.png') }}" alt="Camilo Llorente" class="loading-image">
             </div>
             <div class="loading-text" data-translate="loading-text">Cargando Portfolio</div>
             <div class="loading-subtitle">Camilo Llorente Vásquez</div>
@@ -1420,7 +1420,7 @@
         // Preload critical images
         function preloadImages() {
             const images = [
-                '{{ asset("assets/images/camilo.jpg") }}',
+                '{{ asset("assets/images/perfil_foto.png") }}',
                 '{{ asset("assets/images/ventas-codesign.jpg") }}',
                 '{{ asset("assets/images/adminisp-codesign.jpg") }}',
                 '{{ asset("assets/images/codesign-web.jpg") }}',

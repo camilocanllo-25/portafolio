@@ -34,7 +34,7 @@
     <link rel="alternate" hreflang="ru" href="{{ route('portfolio.index', ['lang' => 'ru']) }}">
     
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/perfil_foto.png') }}">
     
     <!-- CSS Files -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -51,7 +51,7 @@
         <div class="preloader-content">
             <div class="profile-loader">
                 <div class="profile-image-loader">
-                    <img src="{{ asset('assets/images/camilo.jpg') }}" alt="Camilo Llorente" class="loader-image">
+                    <img src="{{ asset('assets/images/perfil_foto.png') }}" alt="Camilo Llorente" class="loader-image">
                     <div class="loader-ring"></div>
                     <div class="loader-ring-2"></div>
                 </div>

@@ -22,16 +22,16 @@ class PortfolioController extends Controller
                 'greeting' => $locale === 'en' ? 'Hello, I am' : 
                              ($locale === 'ru' ? 'Привет, я' : 'Hola, soy'),
                 'name' => 'Camilo Llorente Vásquez',
-                'developer_title' => $locale === 'en' ? 'Full-Stack Developer' : 
-                                   ($locale === 'ru' ? 'Full-Stack Разработчик' : 'Desarrollador Full-Stack'),
-                'hero_description' => $locale === 'en' ? 'Passionate about creating innovative digital solutions. With 6+ years of experience in web development, mobile applications, and home automation systems.' : 
-                                     ($locale === 'ru' ? 'Увлечен созданием инновационных цифровых решений. Более 6 лет опыта в веб-разработке, мобильных приложениях и системах домашней автоматизации.' : 'Apasionado por crear soluciones digitales innovadoras. Con más de 6 años de experiencia en desarrollo web, aplicaciones móviles y sistemas de automatización del hogar.'),
+                'developer_title' => $locale === 'en' ? 'Full-Stack Developer | AI Agents & Telecom Expert' : 
+                                   ($locale === 'ru' ? 'Full-Stack Разработчик | AI Агенты и Телеком' : 'Desarrollador Full-Stack | Agentes de IA, APIs & Telecomunicaciones'),
+                'hero_description' => $locale === 'en' ? 'Software Engineer & AI Automation Specialist. Expert in implementing Voice & Text Multichannel AI Agents (Vapi, Retell, ElevenLabs, WhatsApp, Instagram, Telegram), REST APIs, Payment Gateways (Wompi, MercadoPago, Stripe), Linux Servers, and Telecommunications Systems (ISP, MikroTik, OLT, VoIP).' : 
+                                     ($locale === 'ru' ? 'Инженер по ПО и специалист по автоматизации ИИ. Эксперт в реализации голосовых и текстовых мультиканальных ИИ-агентов, REST API, платежных шлюзов, Linux серверов и телекоммуникаций.' : 'Desarrollador de Software y Especialista en Automatización e Inteligencia Artificial Conversacional. Experto en implementación de Agentes de IA Multicanal (Voz con Vapi/Retell/ElevenLabs y Texto en WhatsApp, Instagram, Telegram), APIs REST, Servidores Linux, Pasarelas de Pago (Wompi, MercadoPago, Stripe) y Telecomunicaciones (ISP, MikroTik, OLT, VoIP).'),
                 'info' => [
                     'age' => $locale === 'en' ? '30 Years' : 
                             ($locale === 'ru' ? '30 лет' : '30 Años'),
                     'location' => $locale === 'en' ? 'Santa María, Itagüí - Colombia' : 
                                  ($locale === 'ru' ? 'Санта-Мария, Итагуи - Колумбия' : 'Santa María, Itagüí - Colombia'),
-                    'email' => 'camilollorente@codesign.com.co',
+                    'email' => 'contacto@camilollorente.blog',
                     'phone' => '+57 300 211 2728',
                     'experience' => $locale === 'en' ? '6+ Years Experience' : 
                                    ($locale === 'ru' ? '6+ лет опыта' : '6+ Años de Experiencia'),
@@ -39,7 +39,7 @@ class PortfolioController extends Controller
                 ],
                 'buttons' => [
                     'download_cv' => $locale === 'en' ? 'Download CV' : 
-                                    ($locale === 'ru' ? 'Скачать CV' : 'Descargar CV'),
+                                    ($locale === 'ru' ? 'Скачать CV' : 'Ver CV'),
                     'contact' => $locale === 'en' ? 'Contact Me' : 
                                 ($locale === 'ru' ? 'Связаться' : 'Contáctame')
                 ],
@@ -58,10 +58,10 @@ class PortfolioController extends Controller
                 'portfolio' => [
                     'section_subtitle' => $locale === 'en' ? 'My Work' : 
                                          ($locale === 'ru' ? 'Мои работы' : 'Mi Trabajo'),
-                    'section_title' => $locale === 'en' ? 'Featured Projects' : 
-                                      ($locale === 'ru' ? 'Избранные проекты' : 'Proyectos Destacados'),
-                    'section_description' => $locale === 'en' ? 'Discover some of my recent projects and achievements in web development, automation, and digital solutions.' : 
-                                            ($locale === 'ru' ? 'Откройте для себя некоторые из моих недавних проектов и достижений в веб-разработке, автоматизации и цифровых решениях.' : 'Descubre algunos de mis proyectos recientes y logros en desarrollo web, automatización y soluciones digitales.'),
+                    'section_title' => $locale === 'en' ? 'Featured AI & Software Projects' : 
+                                      ($locale === 'ru' ? 'Избранные проекты' : 'Proyectos Destacados de IA & Software'),
+                    'section_description' => $locale === 'en' ? 'Discover my recent implementations in AI agents, process automation, payment integrations, servers, and telecom platforms.' : 
+                                            ($locale === 'ru' ? 'Откройте для себя мои недавние реализации ИИ-агентов, автоматизации процессов, платежей и телекома.' : 'Descubre mis proyectos más recientes en implementación de agentes de IA conversacionales, automatización de procesos, pasarelas de pago, servidores y telecomunicaciones.'),
                     'view_project' => $locale === 'en' ? 'View Project' : 
                                      ($locale === 'ru' ? 'Посмотреть проект' : 'Ver Proyecto'),
                     'view_code' => $locale === 'en' ? 'View Code' : 
@@ -74,8 +74,8 @@ class PortfolioController extends Controller
                                          ($locale === 'ru' ? 'Связаться' : 'Ponte en Contacto'),
                     'section_title' => $locale === 'en' ? 'Contact Me' : 
                                       ($locale === 'ru' ? 'Свяжитесь со мной' : 'Contáctame'),
-                    'section_description' => $locale === 'en' ? 'Ready to start your next project? Let\'s discuss how we can work together to create something amazing.' : 
-                                            ($locale === 'ru' ? 'Готовы начать свой следующий проект? Давайте обсудим, как мы можем работать вместе, чтобы создать что-то удивительное.' : '¿Listo para comenzar tu próximo proyecto? Hablemos sobre cómo podemos trabajar juntos para crear algo increíble.'),
+                    'section_description' => $locale === 'en' ? 'Looking for an AI Agent Implementer, Automation Developer or Telecom Expert? Let\'s talk.' : 
+                                            ($locale === 'ru' ? 'Ищете специалиста по внедрению ИИ-агентов или разработчика? Давайте обсудим.' : '¿Buscas un Implementador de Agentes de IA, Especialista en Automatización o Desarrollador Full-Stack? Hablemos.'),
                     'form_name' => $locale === 'en' ? 'Your Name' : 
                                   ($locale === 'ru' ? 'Ваше имя' : 'Tu Nombre'),
                     'form_email' => $locale === 'en' ? 'Your Email' : 
@@ -96,26 +96,26 @@ class PortfolioController extends Controller
                 'services' => [
                     'subtitle' => $locale === 'en' ? 'What I Do' : 
                                  ($locale === 'ru' ? 'Что я делаю' : 'Lo Que Hago'),
-                    'title' => $locale === 'en' ? 'My Services' : 
-                              ($locale === 'ru' ? 'Мои услуги' : 'Mis Servicios'),
-                    'description' => $locale === 'en' ? 'I offer comprehensive digital solutions from web development to automation systems, always focused on innovation and quality.' : 
-                                    ($locale === 'ru' ? 'Я предлагаю комплексные цифровые решения от веб-разработки до систем автоматизации, всегда ориентируясь на инновации и качество.' : 'Ofrezco soluciones digitales integrales desde desarrollo web hasta sistemas de automatización, siempre enfocado en la innovación y calidad.')
+                    'title' => $locale === 'en' ? 'My Specialized Services' : 
+                              ($locale === 'ru' ? 'Мои услуги' : 'Mis Servicios Especializados'),
+                    'description' => $locale === 'en' ? 'End-to-end digital implementation: Conversational AI agents, process automation, server APIs, payment gateways, and telecommunications.' : 
+                                    ($locale === 'ru' ? 'Комплексная реализация: ИИ-агенты, автоматизация, API серверов, платежи и телеком.' : 'Soluciones integrales de alto impacto: Implementación de Agentes de IA conversacionales, automatización de procesos con n8n, APIs REST, servidores Linux, pasarelas de pago y telecomunicaciones.')
                 ],
                 'projects' => [
                     'subtitle' => $locale === 'en' ? 'Portfolio' : 
                                  ($locale === 'ru' ? 'Портфолио' : 'Portafolio'),
-                    'title' => $locale === 'en' ? 'Recent Projects' : 
-                              ($locale === 'ru' ? 'Недавние проекты' : 'Proyectos Recientes')
+                    'title' => $locale === 'en' ? 'Featured Projects' : 
+                              ($locale === 'ru' ? 'Недавние проекты' : 'Proyectos Destacados')
                 ],
                 'typed' => [
+                    'ai' => $locale === 'en' ? 'AI Agent Specialist' : 
+                           ($locale === 'ru' ? 'Специалист по ИИ' : 'Implementador de Agentes IA'),
                     'developer' => $locale === 'en' ? 'Full-Stack Developer' : 
                                   ($locale === 'ru' ? 'Full-Stack Разработчик' : 'Desarrollador Full-Stack'),
-                    'engineer' => $locale === 'en' ? 'Software Engineer' : 
-                                 ($locale === 'ru' ? 'Инженер-программист' : 'Ingeniero de Software'),
-                    'automation' => $locale === 'en' ? 'Automation Specialist' : 
-                                   ($locale === 'ru' ? 'Специалист по автоматизации' : 'Especialista en Automatización'),
-                    'innovator' => $locale === 'en' ? 'Tech Innovator' : 
-                                  ($locale === 'ru' ? 'Технологический инноватор' : 'Innovador Tecnológico')
+                    'apis' => $locale === 'en' ? 'API & Server Architect' : 
+                             ($locale === 'ru' ? 'Архитектор API и серверов' : 'Arquitecto de APIs & Servidores'),
+                    'automation' => $locale === 'en' ? 'Process Automation Expert' : 
+                                   ($locale === 'ru' ? 'Эксперт по автоматизации' : 'Experto en Automatización & Telecom')
                 ]
             ],
             'personalInfo' => [
@@ -123,93 +123,93 @@ class PortfolioController extends Controller
                 'title' => __('portfolio.developer_title'),
                 'birth_date' => '15.07.1994',
                 'phone' => '+57 300 211 2728',
-                'email' => 'camilollorente@codesign.com.co',
+                'email' => 'contacto@camilollorente.blog',
                 'location' => 'Santa María, Itagüí - Colombia',
                 'linkedin' => 'https://www.linkedin.com/in/camilo-andres-llorente-vasquez-41930a193/',
                 'company' => 'Codesign',
                 'experience_years' => 6,
-                'profile_image' => 'assets/images/camilo-profile.jpeg'
+                'profile_image' => 'assets/images/perfil_foto.png'
             ],
             'services' => [
                 [
-                    'icon' => 'fas fa-laptop-code',
-                    'title' => $locale === 'en' ? 'Web Development' : 
-                              ($locale === 'ru' ? 'Веб-разработка' : 'Desarrollo Web'),
-                    'description' => $locale === 'en' ? 'Custom web applications with modern technologies and responsive design.' : 
-                                    ($locale === 'ru' ? 'Веб-приложения с современными технологиями и адаптивным дизайном.' : 'Aplicaciones web personalizadas con tecnologías modernas y diseño responsivo.'),
+                    'icon' => 'fas fa-robot',
+                    'title' => $locale === 'en' ? 'Voice & Text AI Agents' : 
+                              ($locale === 'ru' ? 'Голосовые и текстовые ИИ-агенты' : 'Agentes de IA Conversacional (Voz y Texto)'),
+                    'description' => $locale === 'en' ? 'Multichannel Voicebots (Vapi, Retell, ElevenLabs, Twilio) and Text AI chatbots (WhatsApp API, Instagram, Telegram, Messenger, Web Chat) with CRM & Database integration.' : 
+                                    ($locale === 'ru' ? 'Мультиканальные голосовые и текстовые ИИ-агенты с интеграцией в CRM.' : 'Implementación de Agentes de IA conversacionales para llamadas de voz (Vapi, Retell, ElevenLabs, Twilio) y chat multicanal (WhatsApp API, Instagram, Telegram, Messenger, Web Chat) conectados a servidores y CRM.'),
                     'delay' => 100
                 ],
                 [
-                    'icon' => 'fas fa-mobile-alt',
-                    'title' => $locale === 'en' ? 'Mobile Apps' : 
-                              ($locale === 'ru' ? 'Мобильные приложения' : 'Aplicaciones Móviles'),
-                    'description' => $locale === 'en' ? 'Native and hybrid mobile applications for iOS and Android platforms.' : 
-                                    ($locale === 'ru' ? 'Нативные и гибридные мобильные приложения для iOS и Android.' : 'Aplicaciones móviles nativas e híbridas para iOS y Android.'),
+                    'icon' => 'fas fa-cogs',
+                    'title' => $locale === 'en' ? 'Process Automation' : 
+                              ($locale === 'ru' ? 'Автоматизация процессов' : 'Automatización de Procesos Empresariales'),
+                    'description' => $locale === 'en' ? 'End-to-end process automation workflows using n8n, Make (Integromat), Zapier, and custom Python/Node.js scripts.' : 
+                                    ($locale === 'ru' ? 'Автоматизация рабочих процессов с помощью n8n, Make и скриптов Python.' : 'Automatización de flujos de trabajo con n8n, Make (Integromat), Zapier y scripts en Python/Node.js conectados a bases de datos y herramientas empresariales.'),
                     'delay' => 200
                 ],
                 [
-                    'icon' => 'fas fa-home',
-                    'title' => $locale === 'en' ? 'Home Automation' : 
-                              ($locale === 'ru' ? 'Домашняя автоматизация' : 'Automatización del Hogar'),
-                    'description' => $locale === 'en' ? 'IoT solutions and smart systems for home and industrial automation.' : 
-                                    ($locale === 'ru' ? 'IoT решения и умные системы для домашней и промышленной автоматизации.' : 'Soluciones IoT y sistemas inteligentes para automatización del hogar e industrial.'),
+                    'icon' => 'fas fa-server',
+                    'title' => $locale === 'en' ? 'REST APIs & Server Administration' : 
+                              ($locale === 'ru' ? 'REST API и администрирование серверов' : 'Desarrollo de APIs REST & Conexión a Servidores'),
+                    'description' => $locale === 'en' ? 'Designing and consuming RESTful APIs, Webhooks, JWT/OAuth authentication, and managing Linux (Ubuntu/Debian) VPS servers, Nginx, Docker, and SSL.' : 
+                                    ($locale === 'ru' ? 'Разработка REST API, Webhooks и управление Linux серверами, Docker и Nginx.' : 'Arquitectura e integración experta de APIs RESTful, Webhooks, JWT/OAuth, consumo de web services y administración de servidores Linux, VPS, Nginx, Docker y SSL.'),
                     'delay' => 300
                 ],
                 [
-                    'icon' => 'fas fa-shield-alt',
-                    'title' => $locale === 'en' ? 'Security Systems' : 
-                              ($locale === 'ru' ? 'Системы безопасности' : 'Sistemas de Seguridad'),
-                    'description' => $locale === 'en' ? 'Advanced security solutions and surveillance systems with real-time monitoring.' : 
-                                    ($locale === 'ru' ? 'Продвинутые решения безопасности и системы видеонаблюдения с мониторингом в реальном времени.' : 'Soluciones avanzadas de seguridad y sistemas de vigilancia con monitoreo en tiempo real.'),
+                    'icon' => 'fas fa-credit-card',
+                    'title' => $locale === 'en' ? 'Payment Gateways & Recurring Billing' : 
+                              ($locale === 'ru' ? 'Платежные шлюзы и регулярные платежи' : 'Pasarelas de Pago & Cobros Recurrentes'),
+                    'description' => $locale === 'en' ? 'Integration of payment processors (Wompi, MercadoPago, Stripe, PayU, PayPal) with automated webhooks, invoice generation, and subscription models.' : 
+                                    ($locale === 'ru' ? 'Интеграция платежных шлюзов (Wompi, MercadoPago, Stripe, PayPal) с вебхуками.' : 'Integración segura de pasarelas de pago como Wompi, MercadoPago, Stripe, PayU y PayPal. Procesamiento de webhooks para facturación automática y cobros recurrentes.'),
                     'delay' => 400
                 ],
                 [
-                    'icon' => 'fas fa-cloud',
-                    'title' => $locale === 'en' ? 'Cloud Solutions' : 
-                              ($locale === 'ru' ? 'Облачные решения' : 'Soluciones en la Nube'),
-                    'description' => $locale === 'en' ? 'Cloud infrastructure, migration, and scalable solutions for businesses.' : 
-                                    ($locale === 'ru' ? 'Облачная инфраструктура, миграция и масштабируемые решения для бизнеса.' : 'Infraestructura en la nube, migración y soluciones escalables para empresas.'),
+                    'icon' => 'fas fa-network-wired',
+                    'title' => $locale === 'en' ? 'Telecommunications & ISP Systems' : 
+                              ($locale === 'ru' ? 'Телекоммуникации и провайдеры (ISP)' : 'Telecomunicaciones & Redes ISP'),
+                    'description' => $locale === 'en' ? 'ISP network management, OLT/GPON provisioning, MikroTik API automation, VoIP/SIP Asterisk integration, and specialized ISP management software.' : 
+                                    ($locale === 'ru' ? 'Управление сетями ISP, OLT/GPON, MikroTik API, VoIP/SIP Asterisk.' : 'Gestión de infraestructura de red ISP, aprovisionamiento OLT/GPON, integración con MikroTik API, telefonía IP/VoIP (Asterisk/SIP) y desarrollo de software para ISPs (AdminISP).'),
                     'delay' => 500
                 ],
                 [
-                    'icon' => 'fas fa-palette',
-                    'title' => $locale === 'en' ? 'UI/UX Design' : 
-                              ($locale === 'ru' ? 'UI/UX дизайн' : 'Diseño UI/UX'),
-                    'description' => $locale === 'en' ? 'User-centered design with modern interfaces and optimal user experience.' : 
-                                    ($locale === 'ru' ? 'Пользовательский дизайн с современными интерфейсами и оптимальным пользовательским опытом.' : 'Diseño centrado en el usuario con interfaces modernas y experiencia de usuario óptima.'),
+                    'icon' => 'fas fa-laptop-code',
+                    'title' => $locale === 'en' ? 'Full-Stack Web Development' : 
+                              ($locale === 'ru' ? 'Full-Stack Веб-разработка' : 'Desarrollo Web Full-Stack & Apps'),
+                    'description' => $locale === 'en' ? 'Custom web platforms, POS systems, management portals, and responsive apps built with Laravel, PHP, React, Node.js, and MySQL.' : 
+                                    ($locale === 'ru' ? 'Создание веб-платформ, POS систем и панелей управления на Laravel, React, Node.js.' : 'Desarrollo de aplicaciones web avanzadas, paneles de control, sistemas POS y plataformas a la medida con Laravel, PHP, React, Node.js y MySQL.'),
                     'delay' => 600
                 ]
             ],
             'projects' => [
                 [
-                    'title' => 'Codesign Ventas - Sistema POS',
-                    'description' => __('portfolio.projects.pos.description'),
-                    'image' => 'assets/images/ventas-codesign.jpg',
-                    'technologies' => ['Laravel', 'PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
-                    'url' => 'https://ventas.codesign.com.co/signup',
+                    'title' => 'Agente IA Conversacional Multicanal & Voz',
+                    'description' => 'Sistema de Agentes de IA de Voz (Vapi/ElevenLabs/Twilio) y Texto (WhatsApp Cloud API, Instagram, Telegram) integrado a servidor y pasarela de pagos Wompi/MercadoPago.',
+                    'image' => 'assets/images/ai-agent-project.jpg',
+                    'technologies' => ['OpenAI API', 'Vapi', 'ElevenLabs', 'WhatsApp API', 'n8n', 'Node.js', 'Wompi'],
+                    'url' => '#',
                     'delay' => 100
                 ],
                 [
-                    'title' => 'AdminISP - Sistema de Gestión',
+                    'title' => 'AdminISP - Gestión ISP & MikroTik API',
                     'description' => __('portfolio.projects.adminisp.description'),
                     'image' => 'assets/images/adminisp-codesign.jpg',
-                    'technologies' => ['Laravel', 'API', 'MikroTik', 'WhatsApp', 'OLT'],
+                    'technologies' => ['Laravel', 'API REST', 'MikroTik API', 'WhatsApp API', 'OLT SNMP', 'Wompi'],
                     'url' => 'https://adminisp.codesign.com.co/login',
                     'delay' => 200
                 ],
                 [
-                    'title' => 'Codesign - Sitio Corporativo',
-                    'description' => __('portfolio.projects.website.description'),
-                    'image' => 'assets/images/codesign-web.jpg',
-                    'technologies' => ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'PHP'],
-                    'url' => 'https://codesign.com.co',
+                    'title' => 'Codesign Ventas - Sistema POS',
+                    'description' => __('portfolio.projects.pos.description'),
+                    'image' => 'assets/images/ventas-codesign.jpg',
+                    'technologies' => ['Laravel', 'PHP', 'JavaScript', 'MySQL', 'Bootstrap', 'REST API'],
+                    'url' => 'https://ventas.codesign.com.co/signup',
                     'delay' => 300
                 ],
                 [
-                    'title' => 'Sistema Domótico Arduino',
-                    'description' => __('portfolio.projects.automation.description'),
-                    'image' => 'assets/images/automation-project.jpg',
-                    'technologies' => ['Arduino', 'C++', 'Sensores IoT', 'Android App'],
+                    'title' => 'Plataforma de Automatización & Pasarelas de Pago',
+                    'description' => 'Sistema automatizado en n8n/Laravel para cobros recurrentes y facturación electrónica con webhooks integrados a Stripe, Wompi y MercadoPago.',
+                    'image' => 'assets/images/payment-automation.jpg',
+                    'technologies' => ['n8n', 'Python', 'Stripe', 'Wompi', 'MercadoPago', 'Webhooks', 'Laravel'],
                     'url' => '#',
                     'delay' => 400
                 ],
@@ -217,9 +217,17 @@ class PortfolioController extends Controller
                     'title' => __('portfolio.projects.tropychamoy.title'),
                     'description' => __('portfolio.projects.tropychamoy.desc'),
                     'image' => 'assets/images/tropychamoy.png',
-                    'technologies' => ['Laravel', 'Node.js', 'CSS', 'Bootstrap', 'jQuery', 'AJAX'],
+                    'technologies' => ['Laravel', 'Node.js', 'CSS', 'Bootstrap', 'jQuery', 'AJAX', 'Wompi'],
                     'url' => 'https://tropychamoy.com',
                     'delay' => 500
+                ],
+                [
+                    'title' => 'Sistema Domótico & IoT Telecom',
+                    'description' => __('portfolio.projects.automation.description'),
+                    'image' => 'assets/images/automation-project.jpg',
+                    'technologies' => ['Arduino', 'C++', 'Sensores IoT', 'MQTT', 'Android App'],
+                    'url' => '#',
+                    'delay' => 600
                 ]
             ],
             'stats' => [
@@ -239,37 +247,38 @@ class PortfolioController extends Controller
                               ($locale === 'ru' ? 'Довольных клиентов' : 'Clientes Satisfechos')
                 ],
                 [
-                    'number' => '25+', 
-                    'label' => $locale === 'en' ? 'Mastered Technologies' : 
-                              ($locale === 'ru' ? 'Освоенных технологий' : 'Tecnologías Dominadas')
+                    'number' => '30+', 
+                    'label' => $locale === 'en' ? 'APIs & AI Tools Mastered' : 
+                              ($locale === 'ru' ? 'Освоенных технологий' : 'APIs, IA & Herramientas Dominadas')
                 ]
             ],
             'skills' => [
-                'backend' => [
-                    ['name' => 'PHP / Laravel', 'percentage' => 95],
-                    ['name' => 'Node.js', 'percentage' => 85],
-                    ['name' => 'Python', 'percentage' => 80],
-                    ['name' => 'Java', 'percentage' => 75]
+                'ai_automation' => [
+                    ['name' => 'IA, Agentes de Voz/Texto & LLMs', 'percentage' => 98],
+                    ['name' => 'Claude, ChatGPT & MCPs Protocol', 'percentage' => 96],
+                    ['name' => 'Automatización (n8n / Make / Python)', 'percentage' => 96],
+                    ['name' => 'Prompt Engineering & Function Calling', 'percentage' => 95]
                 ],
-                'frontend' => [
-                    ['name' => 'JavaScript / ES6+', 'percentage' => 92],
-                    ['name' => 'React', 'percentage' => 88],
-                    ['name' => 'Vue.js', 'percentage' => 85],
-                    ['name' => 'HTML5 / CSS3', 'percentage' => 98]
+                'apis_servers' => [
+                    ['name' => 'Programación, APIs REST & Integraciones', 'percentage' => 98],
+                    ['name' => 'Pasarelas de Pago (Wompi, MercadoPago, Stripe)', 'percentage' => 95],
+                    ['name' => 'Servidores Linux (Ubuntu / VPS / Nginx / Docker)', 'percentage' => 92],
+                    ['name' => 'Webhooks en tiempo real & Microservicios', 'percentage' => 95]
                 ],
-                'database' => [
-                    ['name' => 'MySQL', 'percentage' => 90],
-                    ['name' => 'PostgreSQL', 'percentage' => 82],
-                    ['name' => 'Azure', 'percentage' => 78],
-                    ['name' => 'Docker', 'percentage' => 75]
+                'design_uxui' => [
+                    ['name' => 'Diseño UX/UI & Prototipado en Figma', 'percentage' => 92],
+                    ['name' => 'Interfaces Atractivas & Prototipado Interactivo', 'percentage' => 94],
+                    ['name' => 'Diseño Responsive (Bootstrap / CSS3)', 'percentage' => 98],
+                    ['name' => 'Experiencia de Usuario centrada en Conversión', 'percentage' => 90]
                 ],
-                'mobile' => [
-                    ['name' => 'Android (Java)', 'percentage' => 85],
-                    ['name' => 'Arduino / IoT', 'percentage' => 88],
-                    ['name' => 'React Native', 'percentage' => 80],
-                    ['name' => 'Sistemas de Seguridad', 'percentage' => 85]
+                'fullstack_telecom' => [
+                    ['name' => 'PHP / Laravel / Node.js / React', 'percentage' => 96],
+                    ['name' => 'MikroTik API & Redes ISP / OLT', 'percentage' => 92],
+                    ['name' => 'VoIP / SIP / Asterisk', 'percentage' => 85],
+                    ['name' => 'MySQL / PostgreSQL / Python', 'percentage' => 92]
                 ]
-            ]        ];
+            ]
+        ];
 
         return view('portfolio.index', compact('data', 'locale'));
     }

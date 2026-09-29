@@ -380,13 +380,13 @@
     </style>
 </head>
 <body>
-    <button class="download-pdf-btn" id="downloadPdfBtn">Descargar PDF</button>
+    <button class="download-pdf-btn" id="downloadPdfBtn">📥 Descargar PDF</button>
     <div class="pdf-export" id="pdfExportArea" style="display:flex;justify-content:center;padding:32px 0;background:#181818;">
       <div class="cv-main" style="background:#181818;max-width:900px;width:100%;box-sizing:border-box;">
         <div class="cv-left">
             <img src="../images/perfil_foto.png" alt="Camilo Llorente" class="cv-photo">
             <div class="cv-name">Camilo Llorente Vásquez</div>
-            <div class="cv-role">Desarrollador de Software</div>
+            <div class="cv-role" style="font-size:0.95rem; color:#ff3333; font-weight:bold;">Desarrollador Full-Stack | Agentes IA, APIs & Telecom</div>
             <div class="cv-contact">
                 <div class="cv-contact-title">Contacto</div>
                 <ul class="cv-contact-list">
@@ -397,33 +397,28 @@
                     <li><i class="fas fa-globe"></i> camilollorente.blog</li>
                 </ul>
             </div>
-            <div class="cv-section-title">Habilidades</div>
+            <div class="cv-section-title">Habilidades & Aptitudes</div>
             <ul class="cv-skills-list">
-                <li>HTML5 <div class="bar"><span style="width:100%"></span></div></li>
-                <li>CSS3 <div class="bar"><span style="width:100%"></span></div></li>
-                <li>JavaScript <div class="bar"><span style="width:98%"></span></div></li>
-                <li>Laravel <div class="bar"><span style="width:97%"></span></div></li>
-                <li>PHP <div class="bar"><span style="width:95%"></span></div></li>
-                <li>MySQL <div class="bar"><span style="width:95%"></span></div></li>
-                <li>Node.js <div class="bar"><span style="width:90%"></span></div></li>
-                <li>AJAX <div class="bar"><span style="width:95%"></span></div></li>
-                <li>Google Cloud <div class="bar"><span style="width:85%"></span></div></li>
-                <li>Firebase <div class="bar"><span style="width:85%"></span></div></li>
-                <li>Adobe Suite <div class="bar"><span style="width:90%"></span></div></li>
-                <li>QA & Testing <div class="bar"><span style="width:90%"></span></div></li>
-                <li>React <div class="bar"><span style="width:85%"></span></div></li>
-                <li>Bootstrap <div class="bar"><span style="width:95%"></span></div></li>
-                <li>Automatización <div class="bar"><span style="width:90%"></span></div></li>
-                <li>Redes y Telecomunicaciones <div class="bar"><span style="width:88%"></span></div></li>
+                <li>✓ IA, Agentes & LLMs <div class="bar"><span style="width:98%"></span></div></li>
+                <li>✓ Programación & APIs REST <div class="bar"><span style="width:98%"></span></div></li>
+                <li>✓ UX/UI & Figma <div class="bar"><span style="width:94%"></span></div></li>
+                <li>✓ Claude, ChatGPT & MCPs <div class="bar"><span style="width:96%"></span></div></li>
+                <li>Agentes IA Voz (Vapi/ElevenLabs) <div class="bar"><span style="width:95%"></span></div></li>
+                <li>Chatbots Multicanal (WhatsApp/IG) <div class="bar"><span style="width:98%"></span></div></li>
+                <li>Automatización (n8n / Make) <div class="bar"><span style="width:96%"></span></div></li>
+                <li>Pasarelas (Wompi/MercadoPago) <div class="bar"><span style="width:95%"></span></div></li>
+                <li>Servidores Linux (Ubuntu/VPS) <div class="bar"><span style="width:92%"></span></div></li>
+                <li>MikroTik API & Redes ISP <div class="bar"><span style="width:92%"></span></div></li>
+                <li>Laravel, PHP, Node.js, React <div class="bar"><span style="width:96%"></span></div></li>
             </ul>
             <div class="cv-links">
                 <a href="https://www.linkedin.com/in/camilo-andres-llorente-vasquez-41930a193/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/linecodemanager?tab=repositories" target="_blank">GitHub</a>
+                <a href="https://github.com/camilollorente" target="_blank">GitHub</a>
             </div>
         </div>
         <div class="cv-right">
             <div class="cv-summary">
-                Desarrollador de software y redes informáticas con siete (7) años de experiencia. He trabajado para diversas empresas, potenciando mis habilidades en desarrollo de software de gestión empresarial, inventarios, ventas y soluciones web creativas. Especializado en proyectos full-stack, automatización y tecnologías modernas. Apasionado por el diseño atractivo, animaciones y experiencias digitales de alto impacto.
+                Ingeniero/Desarrollador e Implementador de Software con más de seis (6) años de experiencia. Especializado en la creación e integración de Agentes de IA Conversacionales de Voz y Texto, Automatización de Procesos con n8n/Make, Diseño UX/UI en Figma, Herramientas GenAI (Claude, ChatGPT, MCPs), APIs REST, Pasarelas de Pago (Wompi, MercadoPago, Stripe) y Servidores Linux.
             </div>
             <div class="cv-block">
                 <div class="cv-block-title">Experiencia</div>
@@ -530,60 +525,59 @@
 <script>
 document.getElementById('downloadPdfBtn').addEventListener('click', function() {
     const element = document.querySelector('.cv-main');
-    // Guardar estilos originales
-    const original = {
-      width: element.style.width,
-      maxWidth: element.style.maxWidth,
-      margin: element.style.margin,
-      display: element.style.display,
-      flexDirection: element.style.flexDirection
-    };
     
-    // Crear un contenedor temporal para el PDF
+    // Crear un contenedor temporal para el PDF al inicio absoluto de la pantalla
     const tempContainer = document.createElement('div');
-    tempContainer.style.width = '612pt'; // Ancho de carta en puntos
-    tempContainer.style.margin = '0 auto';
-    tempContainer.style.position = 'absolute';
-    tempContainer.style.left = '-9999px';
+    tempContainer.style.position = 'fixed';
+    tempContainer.style.top = '0';
+    tempContainer.style.left = '0';
+    tempContainer.style.width = '612pt'; // Ancho carta
+    tempContainer.style.zIndex = '-9999';
     tempContainer.style.background = '#181818';
+    tempContainer.style.margin = '0';
+    tempContainer.style.padding = '0';
     document.body.appendChild(tempContainer);
     
-    // Clonar el elemento original para no modificar el original
+    // Clonar el elemento original
     const clone = element.cloneNode(true);
     clone.style.display = 'flex';
     clone.style.flexDirection = 'row';
-    clone.style.maxWidth = '612pt'; // Ancho carta
+    clone.style.maxWidth = '612pt';
     clone.style.width = '100%';
     clone.style.margin = '0';
+    clone.style.padding = '0';
     clone.style.background = '#181818';
     clone.style.boxShadow = 'none';
+    clone.style.borderRadius = '0';
     
-    // Asegurarse que las columnas mantengan su proporción
+    // Proporción de columnas
     const leftCol = clone.querySelector('.cv-left');
     const rightCol = clone.querySelector('.cv-right');
     
-    leftCol.style.width = '30%'; // Proporción ajustada para carta
-    leftCol.style.minWidth = '30%';
-    leftCol.style.padding = '20pt';
+    if (leftCol) {
+        leftCol.style.width = '30%';
+        leftCol.style.minWidth = '30%';
+        leftCol.style.padding = '18pt';
+    }
+    if (rightCol) {
+        rightCol.style.width = '70%';
+        rightCol.style.padding = '18pt';
+    }
     
-    rightCol.style.width = '70%'; // Proporción ajustada para carta
-    rightCol.style.padding = '20pt';
-    
-    // Añadir al contenedor temporal
     tempContainer.appendChild(clone);
     
-    // Configuración optimizada para PDF formato carta
     const opt = {
         margin:       [0, 0, 0, 0],
         filename:     'CV-Camilo-Llorente.pdf',
-        image:        { type: 'jpeg', quality: 1 },
+        image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { 
             scale: 2, 
             useCORS: true, 
             backgroundColor: '#181818', 
             logging: false,
             letterRendering: true,
-            allowTaint: true
+            scrollX: 0,
+            scrollY: 0
         },
         jsPDF:        { 
             unit: 'pt', 
@@ -592,24 +586,23 @@ document.getElementById('downloadPdfBtn').addEventListener('click', function() {
             compress: true
         },
         pagebreak:    { 
-            mode: ['avoid-all'], 
+            mode: ['avoid-all', 'css'], 
             avoid: '.cv-block, .cv-project-card, .cv-exp-item, .cv-edu-item, .cv-contact-list li' 
         },
         enableLinks: true
     };
+    
     html2pdf().set(opt).from(clone).save().then(() => {
-        // Eliminar elementos temporales
         if (tempContainer && tempContainer.parentNode) {
             tempContainer.parentNode.removeChild(tempContainer);
         }
-        
-        // No necesitamos restaurar los estilos del elemento original
-        // ya que trabajamos con un clon y no modificamos el original
-        document.getElementById('pdfExportArea').style.padding = '32px 0';
+    }).catch(err => {
+        console.error(err);
+        if (tempContainer && tempContainer.parentNode) {
+            tempContainer.parentNode.removeChild(tempContainer);
+        }
     });
 });
 </script>
-</body>
-    </div>
 </body>
 </html>

@@ -19,7 +19,7 @@ return [
         'age' => '30 лет',
         'location' => 'Колумбия',
         'email' => 'camilo@codesign.com.co',
-        'phone' => '+57 123 456 7890',
+        'phone' => '+57 312 732 1741',
         'experience' => '6+ лет',
         'company' => 'Codesign (Основатель)'
     ],
@@ -250,7 +250,7 @@ return [
             ],
             'phone' => [
                 'title' => 'Телефон',
-                'value' => '+57 123 456 7890',
+                'value' => '+57 312 732 1741',
                 'icon' => 'fas fa-phone'
             ],
             'location' => [

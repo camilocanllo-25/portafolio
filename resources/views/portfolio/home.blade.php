@@ -22,7 +22,7 @@
                     <div class="hero-info">
                         <div class="info-item">
                             <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/573002112728" target="_blank">+57 300 211 2728</a>
+                            <a href="https://wa.me/573127321741" target="_blank">+57 312 732 1741</a>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
@@ -596,7 +596,7 @@
                             <div class="portfolio-info">
                                 <h4>Agente IA Conversacional Multicanal & Voz</h4>
                                 <p>Agente inteligente de voz (Vapi/Retell/ElevenLabs) y texto (WhatsApp Cloud API, Instagram, Telegram) integrado a servidor y pasarelas de pago.</p>
-                                <a href="https://wa.me/573002112728?text=Hola%20Camilo,%20vi%20tu%20proyecto%20de%20Agente%20de%20IA" target="_blank" class="btn btn-primary">
+                                <a href="https://wa.me/573127321741?text=Hola%20Camilo,%20vi%20tu%20proyecto%20de%20Agente%20de%20IA" target="_blank" class="btn btn-primary">
                                     <i class="fab fa-whatsapp"></i> Probar / Consultar Demo
                                 </a>
                             </div>
@@ -720,7 +720,7 @@
                             <div class="portfolio-info">
                                 <h4 data-translate="projects.tropychamoy.title">TropyChamoy.com</h4>
                                 <p data-translate="projects.tropychamoy.desc">Tienda online e-commerce de productos artesanales con integración de pasarela de pago y WhatsApp.</p>
-                                <a href="https://wa.me/573002112728?text=Hola%20quiero%20informaci%C3%B3n%20de%20TropyChamoy.com" target="_blank" class="btn btn-primary">
+                                <a href="https://wa.me/573127321741?text=Hola%20quiero%20informaci%C3%B3n%20de%20TropyChamoy.com" target="_blank" class="btn btn-primary">
                                     <i class="fab fa-whatsapp"></i> <span data-translate="projects.tropychamoy.more">Contáctanos por WhatsApp</span>
                                 </a>
                             </div>
@@ -781,8 +781,8 @@
                                 </div>
                                 <div class="contact-content">
                                     <h5 data-translate="contact-whatsapp">WhatsApp</h5>
-                                    <p>+57 300 211 2728</p>
-                                    <a href="https://wa.me/573002112728" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <p>+57 312 732 1741</p>
+                                    <a href="https://wa.me/573127321741" target="_blank" class="btn btn-outline-primary btn-sm">
                                         <i class="fab fa-whatsapp"></i> <span data-translate="contact-send-message">Enviar Mensaje</span>
                                     </a>
                                 </div>

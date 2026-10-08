@@ -44,7 +44,7 @@
         "description": "Desarrollador Full Stack especializado en Laravel, sistemas de automatización, domotica y desarrollo web",
         "url": "http://camilollorente.codesign.com.co/",
         "email": "camilollorente@codesign.com.co",
-        "telephone": "+573002112728",
+        "telephone": "+573127321741",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Santa María, Itagüí",

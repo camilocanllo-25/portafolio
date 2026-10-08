@@ -32,7 +32,7 @@ class PortfolioController extends Controller
                     'location' => $locale === 'en' ? 'Santa María, Itagüí - Colombia' : 
                                  ($locale === 'ru' ? 'Санта-Мария, Итагуи - Колумбия' : 'Santa María, Itagüí - Colombia'),
                     'email' => 'contacto@camilollorente.blog',
-                    'phone' => '+57 300 211 2728',
+                    'phone' => '+57 312 732 1741',
                     'experience' => $locale === 'en' ? '6+ Years Experience' : 
                                    ($locale === 'ru' ? '6+ лет опыта' : '6+ Años de Experiencia'),
                     'company' => 'Codesign'
@@ -122,7 +122,7 @@ class PortfolioController extends Controller
                 'name' => 'Camilo Llorente Vásquez',
                 'title' => __('portfolio.developer_title'),
                 'birth_date' => '15.07.1994',
-                'phone' => '+57 300 211 2728',
+                'phone' => '+57 312 732 1741',
                 'email' => 'contacto@camilollorente.blog',
                 'location' => 'Santa María, Itagüí - Colombia',
                 'linkedin' => 'https://www.linkedin.com/in/camilo-andres-llorente-vasquez-41930a193/',

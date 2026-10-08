@@ -117,7 +117,7 @@ return [
         'age' => '30 años',
         'location' => 'Colombia',
         'email' => 'contacto@camilollorente.blog',
-        'phone' => '+57 300 211 2728',
+        'phone' => '+57 312 732 1741',
         'experience' => '6+ años',
         'company' => 'Codesign (Fundador)'
     ],
@@ -353,7 +353,7 @@ return [
             ],
             'phone' => [
                 'title' => 'Teléfono',
-                'value' => '+57 123 456 7890',
+                'value' => '+57 312 732 1741',
                 'icon' => 'fas fa-phone'
             ],
             'location' => [
